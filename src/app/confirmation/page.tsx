@@ -5,10 +5,17 @@ import { useRouter } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import Confirmation from "@/components/booking/Confirmation";
 
+let _cachedRaw: string | null = null;
+let _cachedParsed: Record<string, unknown> | null = null;
+
 function getSubmission() {
   if (typeof window === "undefined") return null;
   const stored = sessionStorage.getItem("nextscan_submission");
-  return stored ? JSON.parse(stored) : null;
+  if (stored !== _cachedRaw) {
+    _cachedRaw = stored;
+    _cachedParsed = stored ? JSON.parse(stored) : null;
+  }
+  return _cachedParsed;
 }
 
 function subscribe(callback: () => void) {

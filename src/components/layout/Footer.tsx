@@ -54,8 +54,16 @@ export default function Footer() {
               Have questions? Our coordinators are here to help.
             </p>
             <a
-              href="mailto:hello@nextscan.ca"
+              href="https://cal.com/dan-pappo-sd3rpz/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block mt-2 text-sm text-primary hover:text-primary/80 transition-colors"
+            >
+              Book a call with a coordinator
+            </a>
+            <a
+              href="mailto:hello@nextscan.ca"
+              className="inline-block mt-1 text-sm text-muted-foreground hover:text-background transition-colors"
             >
               hello@nextscan.ca
             </a>
