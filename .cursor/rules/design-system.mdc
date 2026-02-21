@@ -1,0 +1,484 @@
+# NextScan Design System Rules
+
+> Cursor rules file. Place in `.cursor/rules/design-system.mdc` or project root as `.cursorrules`.
+> Based on Vercel's Geist Design System, implemented via shadcn/ui + Tailwind CSS.
+
+---
+
+## Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Components:** shadcn/ui (new-york style, neutral base)
+- **Font:** Geist Sans + Geist Mono via `geist` npm package
+- **Icons:** Lucide React
+- **Utilities:** `clsx` + `tailwind-merge` via `cn()` helper in `@/lib/utils`
+
+---
+
+## Typography
+
+Use the Geist font family for everything. Never use system fonts or fallback stacks as primary.
+
+### Setup
+
+```tsx
+// app/layout.tsx
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
+    </html>
+  );
+}
+```
+
+### Tailwind config
+
+```css
+/* globals.css — Tailwind v4 theme */
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+```
+
+### Type Scale
+
+Follow the Geist typography hierarchy. Use these Tailwind classes:
+
+**Headings** — use for page/section titles:
+
+| Class | Size | Weight | Use |
+|-------|------|--------|-----|
+| `text-5xl font-bold tracking-tight` | 48px | 700 | Hero headline (one per page max) |
+| `text-4xl font-bold tracking-tight` | 36px | 700 | Page title |
+| `text-3xl font-semibold tracking-tight` | 30px | 600 | Section heading |
+| `text-2xl font-semibold tracking-tight` | 24px | 600 | Card/panel heading |
+| `text-xl font-semibold` | 20px | 600 | Sub-section heading |
+| `text-lg font-medium` | 18px | 500 | Minor heading |
+
+**Body copy** — use for paragraphs and multi-line text:
+
+| Class | Size | Use |
+|-------|------|-----|
+| `text-base leading-7` | 16px | Default body text |
+| `text-sm leading-6` | 14px | Secondary body text, descriptions |
+| `text-xs leading-5` | 12px | Tertiary text, captions, fine print |
+
+**Labels** — use for single-line UI text (buttons, badges, menus, form labels):
+
+| Class | Size | Use |
+|-------|------|-----|
+| `text-sm font-medium` | 14px | Default label, nav items, form labels |
+| `text-xs font-medium` | 12px | Badges, tags, helper text |
+| `text-xs font-medium uppercase tracking-wider` | 12px | Overline / eyebrow text |
+
+**Mono** — use for data, codes, technical values:
+
+| Class | Use |
+|-------|-----|
+| `font-mono text-sm` | Prices, reference numbers, clinic IDs |
+| `font-mono text-xs` | Timestamps, coordinates |
+
+### Rules
+
+- Never use `font-bold` on body copy. Bold is for headings and `<strong>` emphasis only.
+- Headings always use `tracking-tight` at sizes 24px and above.
+- Body text uses default tracking (no letter-spacing override).
+- Max content width for body copy: `max-w-prose` (~65ch).
+- One `text-5xl` heading per page. Use `text-3xl` or `text-2xl` for most section headers.
+
+---
+
+## Colors
+
+Use CSS variables for all colors. Never hardcode hex values. The system uses semantic naming with light/dark mode support.
+
+### Semantic Color Tokens
+
+Define in `globals.css`. These map to shadcn/ui's expected token names:
+
+```css
+@layer base {
+  :root {
+    /* Backgrounds */
+    --background: 0 0% 100%;          /* White — page background */
+    --foreground: 0 0% 9%;            /* Near-black — primary text */
+
+    /* Component surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    /* Primary action (teal/cyan for NextScan brand) */
+    --primary: 174 72% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary (muted actions) */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Muted (subtle backgrounds, disabled states) */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent (hover highlights) */
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    /* Destructive (errors, warnings) */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 174 72% 46%;              /* Focus ring matches primary */
+
+    /* Border radius */
+    --radius: 0.5rem;                 /* 8px default corner radius */
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 174 72% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 174 72% 46%;
+    --radius: 0.5rem;
+  }
+}
+```
+
+### Functional Color Classes
+
+Use Tailwind's semantic classes which map to the CSS variables above:
+
+| Purpose | Tailwind class | Token |
+|---------|---------------|-------|
+| Page background | `bg-background` | `--background` |
+| Primary text | `text-foreground` | `--foreground` |
+| Secondary text | `text-muted-foreground` | `--muted-foreground` |
+| Primary button bg | `bg-primary` | `--primary` |
+| Primary button text | `text-primary-foreground` | `--primary-foreground` |
+| Card surface | `bg-card` | `--card` |
+| Borders | `border-border` | `--border` |
+| Input borders | `border-input` | `--input` |
+| Focus ring | `ring-ring` | `--ring` |
+| Error/destructive | `bg-destructive` | `--destructive` |
+| Subtle bg (badges, tags) | `bg-muted` | `--muted` |
+
+### Rules
+
+- Never use raw color values like `bg-gray-100` or `text-black`. Always use semantic tokens.
+- `text-foreground` for primary text. `text-muted-foreground` for secondary/helper text.
+- The NextScan brand color is teal/cyan (`hsl(174, 72%, 46%)`). This is `--primary`.
+- Use `bg-muted` for subtle differentiation. Use `bg-card` for elevated surfaces.
+- Error states use `destructive`. Success states use a green override: `text-emerald-600`.
+- Focus states: `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`
+
+---
+
+## Spacing
+
+Use Tailwind's default spacing scale (4px base). Be consistent.
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `gap-1` / `p-1` | 4px | Micro spacing — icon padding, badge inline spacing |
+| `gap-2` / `p-2` | 8px | Tight spacing — between icon and label, radio options |
+| `gap-3` / `p-3` | 12px | Compact — list item padding, inline groups |
+| `gap-4` / `p-4` | 16px | Default — card padding, form field gaps |
+| `gap-6` / `p-6` | 24px | Comfortable — between form sections, card groups |
+| `gap-8` / `p-8` | 32px | Spacious — between page sections |
+| `gap-12` / `py-12` | 48px | Section separation on landing pages |
+| `gap-16` / `py-16` | 64px | Major page section breaks |
+
+### Rules
+
+- Card internal padding: `p-6` (24px).
+- Space between form fields: `space-y-4` (16px) for compact, `space-y-6` (24px) for standard.
+- Page section vertical rhythm: `py-12` to `py-16`.
+- Max content width: `max-w-4xl mx-auto` for forms and booking flow. `max-w-6xl mx-auto` for landing pages.
+
+---
+
+## Components
+
+Use shadcn/ui components for ALL interactive UI. Never build custom versions of primitives.
+
+### Installation
+
+```bash
+npx shadcn@latest init  # new-york style, neutral base color, CSS variables enabled
+npx shadcn@latest add button input card badge radio-group checkbox select dialog sheet tabs progress toast tooltip calendar form label textarea separator skeleton switch
+```
+
+### Component usage patterns
+
+**Button** — `@/components/ui/button`
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+// Variants available: default, destructive, outline, secondary, ghost, link
+// Sizes available: default, sm, lg, icon
+
+<Button>Primary Action</Button>                    // Filled teal
+<Button variant="outline">Secondary</Button>       // Border-only
+<Button variant="ghost">Tertiary</Button>           // Text-only
+<Button variant="secondary">Muted Action</Button>  // Gray bg
+<Button size="lg">Large CTA</Button>                // For hero sections
+<Button size="sm">Compact</Button>                  // For inline actions
+<Button size="icon"><ArrowRight /></Button>          // Icon-only
+```
+
+**Card** — `@/components/ui/card`
+
+```tsx
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+<Card>
+  <CardHeader>
+    <CardTitle>Clinic Name</CardTitle>
+    <CardDescription>North York, ON · 5 km</CardDescription>
+  </CardHeader>
+  <CardContent>
+    {/* Clinic details */}
+  </CardContent>
+</Card>
+```
+
+**Input** — `@/components/ui/input`
+
+```tsx
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
+<div className="space-y-2">
+  <Label htmlFor="email">Email</Label>
+  <Input id="email" type="email" placeholder="you@example.com" />
+</div>
+```
+
+**RadioGroup** — `@/components/ui/radio-group`
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
+<RadioGroup defaultValue="yes">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="yes" id="yes" />
+    <Label htmlFor="yes">Yes, I have a requisition</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="no" id="no" />
+    <Label htmlFor="no">No, I don't have one yet</Label>
+  </div>
+</RadioGroup>
+```
+
+**Badge** — `@/components/ui/badge`
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+
+// Variants: default, secondary, destructive, outline
+<Badge>MRI</Badge>
+<Badge variant="secondary">Full Body Scan Only</Badge>
+<Badge variant="outline">No border crossing</Badge>
+```
+
+**Dialog (Modal)** — `@/components/ui/dialog`
+- Max width: `sm:max-w-[480px]` on desktop.
+- Always include a close button and keyboard dismiss (Escape).
+
+**Toast** — `@/components/ui/toast`
+- Use for non-blocking confirmations and errors.
+- Success: default variant. Error: destructive variant.
+
+**Progress** — `@/components/ui/progress`
+- Use for the booking flow step indicator.
+
+### Rules
+
+- Never create a custom button, input, select, radio, checkbox, modal, or toast. Use shadcn/ui.
+- Import from `@/components/ui/*` only.
+- Import icons from `lucide-react` only. Never inline SVGs.
+- Use the `cn()` utility from `@/lib/utils` to conditionally merge classes.
+- All form validation uses `react-hook-form` + `zod` schemas.
+
+---
+
+## Layout Patterns
+
+### Page structure
+
+```tsx
+<main className="min-h-screen bg-background">
+  <nav>{/* sticky top nav */}</nav>
+  <div className="max-w-4xl mx-auto px-4 py-8">
+    {/* page content */}
+  </div>
+  <footer>{/* site footer */}</footer>
+</main>
+```
+
+### Booking flow layout
+
+- Container: `max-w-2xl mx-auto px-4`
+- Step indicator at top using `Progress` component
+- Each step is a full-width card or section
+- Navigation: `flex justify-between` with Back (ghost) and Continue (primary) buttons
+- Mobile: single column, full-width inputs, `min-h-[44px]` touch targets
+
+### Card grid (clinic list)
+
+```tsx
+<div className="space-y-4">
+  {clinics.map(clinic => (
+    <Card key={clinic.id} className="cursor-pointer hover:border-primary transition-colors">
+      {/* clinic card content */}
+    </Card>
+  ))}
+</div>
+```
+
+- Clinic cards: stack vertically (never grid on mobile). Use `space-y-4`.
+- Each card: `p-6`, `rounded-lg` (uses `--radius`), `border` default.
+- Hover: `hover:border-primary` to indicate interactivity.
+- Selected: `border-primary ring-2 ring-primary/20` to show active state.
+
+### Responsive breakpoints
+
+| Breakpoint | Width | Use |
+|-----------|-------|-----|
+| Default (mobile) | < 640px | Single column, stacked layout |
+| `sm` | 640px | Minor adjustments |
+| `md` | 768px | 2-column options where appropriate |
+| `lg` | 1024px | Full desktop layout |
+
+Design mobile-first. All components must work at 320px minimum width.
+
+---
+
+## Patterns for NextScan
+
+### Selectable option cards (scan type, body area, region)
+
+```tsx
+<button
+  onClick={() => onSelect(option.id)}
+  className={cn(
+    "w-full text-left rounded-lg border p-4 transition-colors",
+    "hover:border-primary hover:bg-accent",
+    selected === option.id
+      ? "border-primary bg-primary/5 ring-2 ring-primary/20"
+      : "border-border bg-card"
+  )}
+>
+  <div className="text-sm font-medium">{option.name}</div>
+  <div className="text-xs text-muted-foreground mt-1">{option.description}</div>
+</button>
+```
+
+### Star rating display
+
+```tsx
+<div className="flex items-center gap-1.5">
+  <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+  <span className="text-sm font-medium">{rating}</span>
+  <span className="text-xs text-muted-foreground">({reviewCount} reviews)</span>
+</div>
+```
+
+### Trust/compliance badges
+
+```tsx
+<div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+  <Badge variant="outline" className="gap-1">
+    <Shield className="h-3 w-3" /> Not a clinic
+  </Badge>
+  <Badge variant="outline" className="gap-1">
+    <Lock className="h-3 w-3" /> PHIPA-aligned
+  </Badge>
+</div>
+```
+
+### Form section separator
+
+```tsx
+<Separator className="my-6" />
+```
+
+### Empty state (e.g., no clinics found)
+
+```tsx
+<div className="text-center py-12">
+  <Search className="h-10 w-10 text-muted-foreground mx-auto mb-4" />
+  <h3 className="text-lg font-medium">No clinics found</h3>
+  <p className="text-sm text-muted-foreground mt-2 max-w-sm mx-auto">
+    Try expanding your region filters to see more options.
+  </p>
+  <Button variant="outline" className="mt-4" onClick={expandFilters}>
+    Show all regions
+  </Button>
+</div>
+```
+
+---
+
+## Files to Reference
+
+| File | Purpose |
+|------|---------|
+| `src/components/ui/button.tsx` | Canonical button — all variants |
+| `src/components/ui/card.tsx` | Card container |
+| `src/components/ui/input.tsx` | Text inputs |
+| `src/components/ui/badge.tsx` | Badges and pills |
+| `src/components/ui/radio-group.tsx` | Radio selections |
+| `src/components/ui/dialog.tsx` | Modals |
+| `src/components/ui/toast.tsx` | Notifications |
+| `src/components/ui/progress.tsx` | Step indicator |
+| `src/components/ui/calendar.tsx` | Date picker |
+| `src/components/ui/separator.tsx` | Section dividers |
+| `src/components/ui/skeleton.tsx` | Loading states |
+| `src/app/globals.css` | All design tokens (colors, radius, fonts) |
+| `src/lib/utils.ts` | `cn()` helper for class merging |
+| `src/data/nextscan-data.json` | Clinic + flow data (never hardcode from this) |
+
+---
+
+## Do / Don't
+
+| ✅ Do | ❌ Don't |
+|-------|---------|
+| Use `bg-background`, `text-foreground` | Use `bg-white`, `text-black`, raw hex values |
+| Use `<Button>` from shadcn/ui | Create a custom `<button>` with inline styles |
+| Use `text-sm font-medium` for labels | Use arbitrary font sizes like `text-[13px]` |
+| Use `space-y-4` for form field gaps | Eyeball spacing with random padding values |
+| Use `cn()` for conditional classes | String concatenate classNames manually |
+| Use `lucide-react` icons | Inline `<svg>` or import from random icon packs |
+| Use `font-mono` for prices and data | Use sans-serif for numerical data |
+| Build mobile-first, then add breakpoints | Build desktop-first and try to shrink it |
+| Use `Skeleton` components for loading | Show blank space or spinners in content areas |
+| Use `Toast` for confirmations | Use `alert()` or inline success messages |

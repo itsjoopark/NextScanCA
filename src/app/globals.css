@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* shadcn/ui semantic color mappings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Radius scale */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* ─── Light Theme ─── */
+:root {
+  --radius: 0.5rem;
+
+  /* Backgrounds */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 9%);
+
+  /* Component surfaces */
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 9%);
+
+  /* Primary action — NextScan teal/cyan brand */
+  --primary: hsl(174 72% 46%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* Secondary (muted actions) */
+  --secondary: hsl(0 0% 96%);
+  --secondary-foreground: hsl(0 0% 9%);
+
+  /* Muted (subtle backgrounds, disabled states) */
+  --muted: hsl(0 0% 96%);
+  --muted-foreground: hsl(0 0% 45%);
+
+  /* Accent (hover highlights) */
+  --accent: hsl(0 0% 96%);
+  --accent-foreground: hsl(0 0% 9%);
+
+  /* Destructive (errors, warnings) */
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  /* Borders and inputs */
+  --border: hsl(0 0% 90%);
+  --input: hsl(0 0% 90%);
+  --ring: hsl(174 72% 46%);
+}
+
+/* ─── Dark Theme ─── */
+.dark {
+  --background: hsl(0 0% 4%);
+  --foreground: hsl(0 0% 95%);
+  --card: hsl(0 0% 7%);
+  --card-foreground: hsl(0 0% 95%);
+  --popover: hsl(0 0% 7%);
+  --popover-foreground: hsl(0 0% 95%);
+  --primary: hsl(174 72% 46%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 15%);
+  --secondary-foreground: hsl(0 0% 95%);
+  --muted: hsl(0 0% 15%);
+  --muted-foreground: hsl(0 0% 64%);
+  --accent: hsl(0 0% 15%);
+  --accent-foreground: hsl(0 0% 95%);
+  --destructive: hsl(0 62% 50%);
+  --destructive-foreground: hsl(0 0% 95%);
+  --border: hsl(0 0% 15%);
+  --input: hsl(0 0% 15%);
+  --ring: hsl(174 72% 46%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
