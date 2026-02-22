@@ -9,7 +9,6 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <span className="text-lg font-bold text-background">NextScan</span>
-            <span className="text-xs text-muted-foreground font-medium">.ca</span>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">
               Helping Ontario patients access private MRI and CT scans faster.
               We coordinate — you choose.
@@ -53,19 +52,19 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               Have questions? Our coordinators are here to help.
             </p>
+            <Link
+              href="/booking"
+              className="inline-block mt-2 text-sm text-muted-foreground hover:text-background transition-colors"
+            >
+              Find Available Scans
+            </Link>
             <a
               href="https://cal.com/dan-pappo-sd3rpz/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-2 text-sm text-primary hover:text-primary/80 transition-colors"
+              className="inline-block mt-1 text-sm text-primary hover:text-primary/80 transition-colors"
             >
               Book a call with a coordinator
-            </a>
-            <a
-              href="mailto:hello@nextscan.ca"
-              className="inline-block mt-1 text-sm text-muted-foreground hover:text-background transition-colors"
-            >
-              hello@nextscan.ca
             </a>
           </div>
         </div>

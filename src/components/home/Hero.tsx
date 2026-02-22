@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-background via-primary/5 to-background">
+    <section className="relative overflow-hidden bg-transparent">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
@@ -12,7 +12,7 @@ export default function Hero() {
             className="animate-fade-in-up inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-6"
           >
             <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-            20+ vetted clinics across Canada &amp; border locations
+            2 min intake → We find options → You choose a slot
           </span>
 
           {/* Headline */}
@@ -34,8 +34,9 @@ export default function Hero() {
             className="animate-fade-in-up mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
             style={{ animationDelay: "200ms" }}
           >
-            Compare pricing and availability at vetted clinics across Ontario
-            and nearby border locations. No referral needed.
+            Share your needs once, and we&apos;ll find available vetted clinics
+            across Ontario and nearby border locations with pricing before you
+            book.
           </p>
 
           {/* CTAs */}

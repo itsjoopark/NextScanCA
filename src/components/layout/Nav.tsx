@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,9 +15,15 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-primary">NextScan</span>
-            <span className="text-xs text-muted-foreground font-medium">.ca</span>
+          <Link href="/" className="flex items-center" aria-label="NextScan home">
+            <Image
+              src="/nextscan.svg"
+              alt="NextScan"
+              width={142}
+              height={36}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -26,6 +33,12 @@ export default function Nav() {
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               How It Works
+            </Link>
+            <Link
+              href="/#why-nextscan"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Why NextScan
             </Link>
             <Link
               href="/#faq"
@@ -69,6 +82,16 @@ export default function Nav() {
                 onClick={() => setMobileOpen(false)}
               >
                 How It Works
+              </Link>
+              <Link
+                href="/#why-nextscan"
+                className={cn(
+                  "px-3 py-2 text-sm font-medium text-muted-foreground",
+                  "hover:text-foreground hover:bg-accent rounded-lg"
+                )}
+                onClick={() => setMobileOpen(false)}
+              >
+                Why NextScan
               </Link>
               <Link
                 href="/#faq"

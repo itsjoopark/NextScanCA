@@ -1,5 +1,4 @@
 import { Building2, Handshake, FileText, DollarSign, Lock } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 const trustItems = [
   { icon: Building2, text: "Not a clinic" },
@@ -11,16 +10,14 @@ const trustItems = [
 
 export default function TrustBar() {
   return (
-    <div className="bg-muted border-y border-border">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          {trustItems.map((item) => (
-            <Badge key={item.text} variant="outline" className="gap-1">
-              <item.icon className="h-3 w-3" />
-              {item.text}
-            </Badge>
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        {trustItems.map((item) => (
+          <span key={item.text} className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
+            <item.icon className="h-4 w-4" />
+            {item.text}
+          </span>
+        ))}
       </div>
     </div>
   );
