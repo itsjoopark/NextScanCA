@@ -22,13 +22,18 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/booking" className="text-sm text-muted-foreground hover:text-background transition-colors">
+                <Link href="/booking" className="text-sm text-primary hover:text-primary/80 transition-colors">
                   Find Available Scans
                 </Link>
               </li>
               <li>
                 <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-background transition-colors">
                   How It Works
+                </Link>
+              </li>
+              <li>
+                <Link href="/#why-nextscan" className="text-sm text-muted-foreground hover:text-background transition-colors">
+                  Why NextScan
                 </Link>
               </li>
               <li>
@@ -49,15 +54,6 @@ export default function Footer() {
             <h3 className="text-xs font-medium uppercase tracking-wider text-background mb-3">
               Contact
             </h3>
-            <p className="text-sm text-muted-foreground">
-              Have questions? Our coordinators are here to help.
-            </p>
-            <Link
-              href="/booking"
-              className="inline-block mt-2 text-sm text-muted-foreground hover:text-background transition-colors"
-            >
-              Find Available Scans
-            </Link>
             <a
               href="https://cal.com/dan-pappo-sd3rpz/30min"
               target="_blank"

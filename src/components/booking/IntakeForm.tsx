@@ -335,6 +335,20 @@ export default function IntakeForm({
                 />
               </div>
 
+              {selectedClinic.priceRange && (
+                <div className="mt-3">
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                    Price Range
+                  </p>
+                  <p className="text-sm font-medium mt-1">
+                    ${selectedClinic.priceRange.low.toLocaleString()} &ndash; ${selectedClinic.priceRange.high.toLocaleString()} {selectedClinic.priceRange.currency}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Final pricing confirmed by coordinator before booking
+                  </p>
+                </div>
+              )}
+
               {/* Sample reviews */}
               <div className="mt-4 space-y-3">
                 <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">

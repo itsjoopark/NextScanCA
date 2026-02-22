@@ -131,7 +131,8 @@
           "address": { "city": "Cancun", "region": "Quintana Roo", "country": "Mexico" },
           "contact": {},
           "coordinates": { "lat": 21.1619, "lng": -86.8515 },
-          "reviews": { "rating": 4.0, "reviewCount": 147, "googleUrl": "https://maps.app.goo.gl/K89mAAAkHWbjHZ548", "sampleReviews": ["The place is clean, organised with a calming atmosphere.", "I was really impressed with the professionalism & service of this clinic.", "Technician very professional y kind."] }
+          "reviews": { "rating": 4.0, "reviewCount": 147, "googleUrl": "https://maps.app.goo.gl/K89mAAAkHWbjHZ548", "sampleReviews": ["The place is clean, organised with a calming atmosphere.", "I was really impressed with the professionalism & service of this clinic.", "Technician very professional y kind."] },
+          "priceRange": { "low": 200, "high": 500, "currency": "USD" }
         },
         {
           "id": "mx-jal-renue-puerto-vallarta",
@@ -142,7 +143,8 @@
           "address": { "city": "Puerto Vallarta", "region": "Jalisco", "country": "Mexico" },
           "contact": {},
           "coordinates": { "lat": 20.6534, "lng": -105.2253 },
-          "reviews": { "rating": 5.0, "reviewCount": 12, "googleUrl": "https://maps.app.goo.gl/KK7ga2hEfXye58gH7", "sampleReviews": ["The staff is professional and knowledgeable.", "A relaxing experience.", "Highly recommend for anyone seeking top notch medical care."] }
+          "reviews": { "rating": 5.0, "reviewCount": 12, "googleUrl": "https://maps.app.goo.gl/KK7ga2hEfXye58gH7", "sampleReviews": ["The staff is professional and knowledgeable.", "A relaxing experience.", "Highly recommend for anyone seeking top notch medical care."] },
+          "priceRange": { "low": 250, "high": 600, "currency": "USD" }
         },
         {
           "id": "mx-jal-renue-guadalajara",
@@ -153,7 +155,8 @@
           "address": { "city": "Guadalajara", "region": "Jalisco", "country": "Mexico" },
           "contact": {},
           "coordinates": { "lat": 20.6597, "lng": -103.3496 },
-          "reviews": { "rating": 4.8, "reviewCount": 31, "googleUrl": "https://maps.app.goo.gl/bRerJhtKrCzrzaE6A", "sampleReviews": ["Excellent attention, professionalism and service; the staff is very attentive.", "Very friendly, excellent service.", "Excellent service, highly recommended."] }
+          "reviews": { "rating": 4.8, "reviewCount": 31, "googleUrl": "https://maps.app.goo.gl/bRerJhtKrCzrzaE6A", "sampleReviews": ["Excellent attention, professionalism and service; the staff is very attentive.", "Very friendly, excellent service.", "Excellent service, highly recommended."] },
+          "priceRange": { "low": 200, "high": 550, "currency": "USD" }
         },
         {
           "id": "ca-ab-mic-century-park",
@@ -164,7 +167,8 @@
           "address": { "line1": "201-2377 111 St NW", "city": "Edmonton", "region": "AB", "postal_code": "T6J 5E5", "country": "Canada" },
           "contact": { "phone": "780-450-1500", "website": "https://www.mic.ca/locations/century-park/" },
           "coordinates": { "lat": 53.5462055, "lng": -113.491241 },
-          "reviews": { "rating": 4.5, "reviewCount": 407, "googleUrl": "https://maps.app.goo.gl/gA1kuiB4rV24isXq9", "sampleReviews": ["The staff and service and explanation of the procedure are excellent!", "Did the regular paperwork, invited to put on a gown and wait in the change room.", "Friendly and professional front staff and technician and bright, open space."] }
+          "reviews": { "rating": 4.5, "reviewCount": 407, "googleUrl": "https://maps.app.goo.gl/gA1kuiB4rV24isXq9", "sampleReviews": ["The staff and service and explanation of the procedure are excellent!", "Did the regular paperwork, invited to put on a gown and wait in the change room.", "Friendly and professional front staff and technician and bright, open space."] },
+          "priceRange": { "low": 500, "high": 1100, "currency": "CAD" }
         },
         {
           "id": "ca-ab-mic-terra-losa",
@@ -175,7 +179,8 @@
           "address": { "line1": "9566 170 St NW", "city": "Edmonton", "region": "AB", "postal_code": "T5T 5R5", "country": "Canada" },
           "contact": { "phone": "780-450-1500", "website": "https://www.mic.ca/locations/terra-losa/" },
           "coordinates": { "lat": 53.534545, "lng": -113.6154205 },
-          "reviews": { "rating": 4.3, "reviewCount": 260, "googleUrl": "https://maps.app.goo.gl/576LHnBQFLQc4Hec7", "sampleReviews": ["The staff and technicians there are awesome and the wait time was minimal.", "Got home to show my kids the pics and the disc doesnt work this time.", "I really like the location and the service I received has been great."] }
+          "reviews": { "rating": 4.3, "reviewCount": 260, "googleUrl": "https://maps.app.goo.gl/576LHnBQFLQc4Hec7", "sampleReviews": ["The staff and technicians there are awesome and the wait time was minimal.", "Got home to show my kids the pics and the disc doesnt work this time.", "I really like the location and the service I received has been great."] },
+          "priceRange": { "low": 500, "high": 1100, "currency": "CAD" }
         },
         {
           "id": "ca-ab-cdc-chinook",
@@ -186,7 +191,8 @@
           "address": { "line1": "#1, 6020 1A St SW", "city": "Calgary", "region": "AB", "postal_code": "T2H 0G3", "country": "Canada" },
           "contact": { "phone": "403-253-4666", "website": "https://www.canadadiagnostic.com/contact/" },
           "coordinates": { "lat": 51.0456064, "lng": -114.057541 },
-          "reviews": { "rating": 4.5, "reviewCount": 358, "googleUrl": "https://maps.app.goo.gl/THoQ7Pk3ecjrjST28", "sampleReviews": ["Great service, kind employees, I'm so grateful them for their work, thank you!", "Highly professional staff Very less waiting time Lot of parking available", "A 1 hour MRI is not the sort of thing that most people would be excited about."] }
+          "reviews": { "rating": 4.5, "reviewCount": 358, "googleUrl": "https://maps.app.goo.gl/THoQ7Pk3ecjrjST28", "sampleReviews": ["Great service, kind employees, I'm so grateful them for their work, thank you!", "Highly professional staff Very less waiting time Lot of parking available", "A 1 hour MRI is not the sort of thing that most people would be excited about."] },
+          "priceRange": { "low": 450, "high": 1200, "currency": "CAD" }
         },
         {
           "id": "ca-sk-mayfair-saskatoon",
@@ -197,7 +203,8 @@
           "address": { "line1": "115-210 Avenue P South", "city": "Saskatoon", "region": "SK", "postal_code": "S7M 2W2", "country": "Canada" },
           "contact": { "website": "https://www.radiology.ca/" },
           "coordinates": { "lat": 52.131802, "lng": -106.660767 },
-          "reviews": { "rating": 3.8, "reviewCount": 15, "sampleReviews": ["Staff were very kind and made you feel comfortable.", "High personal expense, zero customer service after fact at Mayfair.", "The receptionist was reassuring and discussed options."] }
+          "reviews": { "rating": 3.8, "reviewCount": 15, "sampleReviews": ["Staff were very kind and made you feel comfortable.", "High personal expense, zero customer service after fact at Mayfair.", "The receptionist was reassuring and discussed options."] },
+          "priceRange": { "low": 400, "high": 950, "currency": "CAD" }
         },
         {
           "id": "ca-sk-mayfair-regina",
@@ -208,7 +215,8 @@
           "address": { "line1": "135-1621 Albert St", "city": "Regina", "region": "SK", "postal_code": "S4P 2S5", "country": "Canada" },
           "contact": { "website": "https://www.radiology.ca/" },
           "coordinates": { "lat": 50.4479733, "lng": -104.6158764 },
-          "reviews": { "rating": 4.3, "reviewCount": 105, "sampleReviews": ["Awesome service and friendly staff.", "The front office staff went above and beyond after I messed up locations.", "Costumer / Patient service was very good."] }
+          "reviews": { "rating": 4.3, "reviewCount": 105, "sampleReviews": ["Awesome service and friendly staff.", "The front office staff went above and beyond after I messed up locations.", "Costumer / Patient service was very good."] },
+          "priceRange": { "low": 400, "high": 950, "currency": "CAD" }
         },
         {
           "id": "ca-sk-open-skies-regina",
@@ -219,7 +227,8 @@
           "address": { "line1": "1-2727 Parliament Ave", "city": "Regina", "region": "SK", "postal_code": "S4S 6X5", "country": "Canada" },
           "contact": { "phone": "306-352-6736", "website": "https://www.openskiesmri.com/" },
           "coordinates": { "lat": 50.4479733, "lng": -104.6158764 },
-          "reviews": { "rating": 4.4, "reviewCount": 18, "sampleReviews": ["Excellent staff, nice equipment and an easy experience.", "People are nervous enough coming in they don't need to be treated like that.", "The staff are great, disability parking at the door and wait time is short."] }
+          "reviews": { "rating": 4.4, "reviewCount": 18, "sampleReviews": ["Excellent staff, nice equipment and an easy experience.", "People are nervous enough coming in they don't need to be treated like that.", "The staff are great, disability parking at the door and wait time is short."] },
+          "priceRange": { "low": 425, "high": 1000, "currency": "CAD" }
         },
         {
           "id": "ca-sk-national-medical-imaging-saskatoon",
@@ -230,7 +239,8 @@
           "address": { "line1": "107-2325 Preston Ave", "city": "Saskatoon", "region": "SK", "postal_code": "S7J 2G2", "country": "Canada" },
           "contact": { "phone": "306-667-9729" },
           "coordinates": { "lat": 52.131802, "lng": -106.660767 },
-          "reviews": { "rating": 4.4, "reviewCount": 26, "sampleReviews": ["Amazing service, professional staff.", "It was very unprofessional and ruined my experience.", "Wonderful experience, the staff was very friendly and kind."] }
+          "reviews": { "rating": 4.4, "reviewCount": 26, "sampleReviews": ["Amazing service, professional staff.", "It was very unprofessional and ruined my experience.", "Wonderful experience, the staff was very friendly and kind."] },
+          "priceRange": { "low": 450, "high": 1050, "currency": "CAD" }
         },
         {
           "id": "ca-sk-prairie-skies-ct-regina",
@@ -241,7 +251,8 @@
           "address": { "line1": "6-2727 Parliament Ave", "city": "Regina", "region": "SK", "postal_code": "S4S 6X5", "country": "Canada" },
           "contact": { "phone": "306-352-6736" },
           "coordinates": { "lat": 50.4149217, "lng": -104.6199299 },
-          "reviews": { "rating": 3.2, "reviewCount": 80, "sampleReviews": ["Friendly staff and awesome service with minimal wait time.", "This was my last ultrasound for this pregnancy and it was ruined.", "Would choose this location again in the future."] }
+          "reviews": { "rating": 3.2, "reviewCount": 80, "sampleReviews": ["Friendly staff and awesome service with minimal wait time.", "This was my last ultrasound for this pregnancy and it was ruined.", "Would choose this location again in the future."] },
+          "priceRange": { "low": 400, "high": 900, "currency": "CAD" }
         },
         {
           "id": "ca-qc-radiologie-varad-montreal",
@@ -252,7 +263,8 @@
           "address": { "line1": "150 Rue Sainte-Catherine Ouest, Complexe Desjardins", "city": "Montréal", "region": "QC", "postal_code": "H5B 1B2", "country": "Canada" },
           "contact": { "phone": "514-281-1355", "website": "https://www.radiologievarad.com/fr/" },
           "coordinates": { "lat": 45.5031824, "lng": -73.5698065 },
-          "reviews": { "rating": 3.4, "reviewCount": 341, "sampleReviews": ["Efficiently run clinic providing timely, friendly service.", "The staff are nice but horribly trained and unprofessional.", "Great place and a smooth experience all across."] }
+          "reviews": { "rating": 3.4, "reviewCount": 341, "sampleReviews": ["Efficiently run clinic providing timely, friendly service.", "The staff are nice but horribly trained and unprofessional.", "Great place and a smooth experience all across."] },
+          "priceRange": { "low": 500, "high": 1200, "currency": "CAD" }
         },
         {
           "id": "ca-qc-irm-sud-ouest-montreal",
@@ -263,7 +275,8 @@
           "address": { "line1": "5515 St-Jacques O, Suite 200", "city": "Montréal", "region": "QC", "postal_code": "H4A 2E3", "country": "Canada" },
           "contact": { "phone": "514-484-8484", "website": "https://irmsudouest.com/" },
           "coordinates": { "lat": 45.5031824, "lng": -73.5698065 },
-          "reviews": { "rating": 4.2, "reviewCount": 316, "sampleReviews": ["Amazing service & great experience from the reception and nurses!!", "Highly recommend this clinic to anyone looking for quality medical care!", "I waited 1 hour to see technician."] }
+          "reviews": { "rating": 4.2, "reviewCount": 316, "sampleReviews": ["Amazing service & great experience from the reception and nurses!!", "Highly recommend this clinic to anyone looking for quality medical care!", "I waited 1 hour to see technician."] },
+          "priceRange": { "low": 450, "high": 1100, "currency": "CAD" }
         },
         {
           "id": "ca-qc-medvue-carrefour-laval",
@@ -274,7 +287,8 @@
           "address": { "line1": "3030 Boulevard Le Carrefour, Suite 503", "city": "Laval", "region": "QC", "postal_code": "H7T 2P5", "country": "Canada" },
           "contact": { "phone": "1-833-481-8783", "website": "https://medvue.ca/en/clinics/laval-carrefour/" },
           "coordinates": { "lat": 45.5571125, "lng": -73.7211779 },
-          "reviews": { "rating": 4.7, "reviewCount": 394, "sampleReviews": ["Fast service, excellent facilities and great staff.", "Excellent service employees very professional", "A special mention goes to Mark, the technician who performed my MRI."] }
+          "reviews": { "rating": 4.7, "reviewCount": 394, "sampleReviews": ["Fast service, excellent facilities and great staff.", "Excellent service employees very professional", "A special mention goes to Mark, the technician who performed my MRI."] },
+          "priceRange": { "low": 550, "high": 1200, "currency": "CAD" }
         },
         {
           "id": "ca-qc-ottawa-valley-mri-gatineau",
@@ -285,7 +299,8 @@
           "address": { "line1": "15 Rue Papineau", "city": "Gatineau", "region": "QC", "postal_code": "J8X 1T4", "country": "Canada" },
           "contact": { "phone": "819-420-0130", "website": "https://www.ottawagatineauimaging.com/" },
           "coordinates": { "lat": 45.4304672, "lng": -75.7260111 },
-          "reviews": { "rating": 4.4, "reviewCount": 22, "sampleReviews": ["I also dealt with Francesca (spelling?), and she, too, gave me great service.", "The staff were fast, polite, and professional from start to finish.", "I cannot begin to say how much I recommend this location for an MRI."] }
+          "reviews": { "rating": 4.4, "reviewCount": 22, "sampleReviews": ["I also dealt with Francesca (spelling?), and she, too, gave me great service.", "The staff were fast, polite, and professional from start to finish.", "I cannot begin to say how much I recommend this location for an MRI."] },
+          "priceRange": { "low": 475, "high": 1050, "currency": "CAD" }
         },
         {
           "id": "ca-qc-st-joseph-mri-gatineau",
@@ -296,7 +311,8 @@
           "address": { "line1": "444 Boulevard de l'Hôpital, Suite 120", "city": "Gatineau", "region": "QC", "postal_code": "J8T 7X6", "country": "Canada" },
           "contact": { "phone": "819-777-1674", "website": "https://www.ottawagatineauimaging.com/contact" },
           "coordinates": { "lat": 45.4277659, "lng": -75.710976 },
-          "reviews": { "rating": 3.8, "reviewCount": 31, "sampleReviews": ["The staff were great, super friendly and reassuring.", "Not a welcoming environment...in English or French!", "We had a great technician and a good experience overall."] }
+          "reviews": { "rating": 3.8, "reviewCount": 31, "sampleReviews": ["The staff were great, super friendly and reassuring.", "Not a welcoming environment...in English or French!", "We had a great technician and a good experience overall."] },
+          "priceRange": { "low": 475, "high": 1050, "currency": "CAD" }
         },
         {
           "id": "ca-qc-radimed-ville-saint-laurent",
@@ -307,7 +323,8 @@
           "address": { "line1": "6363 Route Transcanadienne, #135", "city": "Saint-Laurent", "region": "QC", "postal_code": "H4T 1Z9", "country": "Canada" },
           "contact": { "website": "https://radimed.ca/cliniques/ville-saint-laurent/" },
           "coordinates": { "lat": 45.5088774, "lng": -73.6875187 },
-          "reviews": { "rating": 3.8, "reviewCount": 32, "sampleReviews": ["Always prompt, staff is courteous and facilities are clean.", "I work in healthcare and I would never treat a patient like I was treated there.", "Georgia the receptionist was super friendly and personable."] }
+          "reviews": { "rating": 3.8, "reviewCount": 32, "sampleReviews": ["Always prompt, staff is courteous and facilities are clean.", "I work in healthcare and I would never treat a patient like I was treated there.", "Georgia the receptionist was super friendly and personable."] },
+          "priceRange": { "low": 500, "high": 1100, "currency": "CAD" }
         },
         {
           "id": "ca-nb-irm-moncton-mri",
@@ -318,7 +335,8 @@
           "address": { "line1": "585 Mapleton Rd, Suite 101", "city": "Moncton", "region": "NB", "postal_code": "E1G 2K5", "country": "Canada" },
           "contact": { "phone": "506-204-7040", "website": "https://monctonmri.com/index.php/contact/" },
           "coordinates": { "lat": 46.0985679, "lng": -64.8004265 },
-          "reviews": { "rating": 4.1, "reviewCount": 16, "sampleReviews": ["Super great staff and experience, HIGHLY recommend this place!", "Plus the music/earphones and staff voices came through crystal clear.", "Short wait times, Friendly Staff, Nice Modern Clinic."] }
+          "reviews": { "rating": 4.1, "reviewCount": 16, "sampleReviews": ["Super great staff and experience, HIGHLY recommend this place!", "Plus the music/earphones and staff voices came through crystal clear.", "Short wait times, Friendly Staff, Nice Modern Clinic."] },
+          "priceRange": { "low": 500, "high": 1100, "currency": "CAD" }
         },
         {
           "id": "ca-ns-healthview-halifax",
@@ -329,7 +347,8 @@
           "address": { "line1": "255 Lacewood Drive, Suite 100A", "city": "Halifax", "region": "NS", "postal_code": "B3M 4G2", "country": "Canada" },
           "contact": { "phone": "902-443-9922", "website": "https://healthviewimaging.ca/" },
           "coordinates": { "lat": 44.648618, "lng": -63.5859487 },
-          "reviews": { "rating": 3.5, "reviewCount": 31, "sampleReviews": ["My husband did say after inside the rest of the staff was excellent.", "Than I was denied service because of my line of work.", "The woman who answered the phone was extremely rude and unpleasant."] }
+          "reviews": { "rating": 3.5, "reviewCount": 31, "sampleReviews": ["My husband did say after inside the rest of the staff was excellent.", "Than I was denied service because of my line of work.", "The woman who answered the phone was extremely rude and unpleasant."] },
+          "priceRange": { "low": 500, "high": 1050, "currency": "CAD" }
         },
         {
           "id": "ca-ns-why-wait-halifax",
@@ -340,7 +359,8 @@
           "address": { "line1": "Suite 50, 6140 Young Street", "city": "Halifax", "region": "NS", "postal_code": "B3K 0G2", "country": "Canada" },
           "contact": { "phone": "902-800-8787", "website": "https://whywaitimaging.ca/contact/" },
           "coordinates": { "lat": 44.648618, "lng": -63.5859487 },
-          "reviews": { "rating": 4.7, "reviewCount": 15, "sampleReviews": ["The quality of service was excellent, as was their professionalism.", "The doctor and staff were helpful and I got results the same day.", "I would give this place 6 stars if I could."] }
+          "reviews": { "rating": 4.7, "reviewCount": 15, "sampleReviews": ["The quality of service was excellent, as was their professionalism.", "The doctor and staff were helpful and I got results the same day.", "I would give this place 6 stars if I could."] },
+          "priceRange": { "low": 475, "high": 1000, "currency": "CAD" }
         },
         {
           "id": "us-ny-windsong-buffalo-mri-snyder",
@@ -351,7 +371,8 @@
           "address": { "line1": "4925 Main St", "city": "Amherst", "region": "NY", "postal_code": "14226", "country": "United States" },
           "contact": { "phone": "716-631-2500", "website": "https://windsongwny.com/imaging-apt-old/" },
           "coordinates": { "lat": 42.9584653, "lng": -78.7696689 },
-          "reviews": { "rating": 4.7, "reviewCount": 875, "sampleReviews": ["Great atmosphere and friendly staff....prompt service.....", "The location, offices, scheduling, and technicians are top rate.", "Very kind MRI technician who checks in with you every 5 mins."] }
+          "reviews": { "rating": 4.7, "reviewCount": 875, "sampleReviews": ["Great atmosphere and friendly staff....prompt service.....", "The location, offices, scheduling, and technicians are top rate.", "Very kind MRI technician who checks in with you every 5 mins."] },
+          "priceRange": { "low": 350, "high": 800, "currency": "USD" }
         },
         {
           "id": "us-ny-glmi-williamsville",
@@ -362,7 +383,8 @@
           "address": { "line1": "111 N Maplemere Rd, Suite 120", "city": "Williamsville", "region": "NY", "postal_code": "14221", "country": "United States" },
           "contact": { "website": "https://www.glmi.com/locations/williamsville" },
           "coordinates": { "lat": 42.9637836, "lng": -78.7377258 },
-          "reviews": { "rating": 3.8, "reviewCount": 170, "sampleReviews": ["This place has good service and people are nice.", "Quick check in, comfortable waiting rooms and lockers, clean office space.", "Good experience with check-in and the ultrasound tech."] }
+          "reviews": { "rating": 3.8, "reviewCount": 170, "sampleReviews": ["This place has good service and people are nice.", "Quick check in, comfortable waiting rooms and lockers, clean office space.", "Good experience with check-in and the ultrasound tech."] },
+          "priceRange": { "low": 300, "high": 750, "currency": "USD" }
         },
         {
           "id": "us-ny-claxton-hepburn-ogdensburg",
@@ -373,7 +395,8 @@
           "address": { "line1": "214 King St", "city": "Ogdensburg", "region": "NY", "postal_code": "13669", "country": "United States" },
           "contact": { "phone": "315-393-3600", "website": "https://www.claxtonhepburn.org/patient-visitors/canadian-patients/" },
           "coordinates": { "lat": 44.6914679, "lng": -75.4993114 },
-          "reviews": { "rating": 2.9, "reviewCount": 95, "sampleReviews": ["Took my mother in for an ortho injury, the ER staff was fantastic!", "Doubt case manager has even attempted to search out of network for facilities.", "Very bad service at the canton Claxton Hepburn offices."] }
+          "reviews": { "rating": 2.9, "reviewCount": 95, "sampleReviews": ["Took my mother in for an ortho injury, the ER staff was fantastic!", "Doubt case manager has even attempted to search out of network for facilities.", "Very bad service at the canton Claxton Hepburn offices."] },
+          "priceRange": { "low": 300, "high": 700, "currency": "USD" }
         },
         {
           "id": "us-mi-mclaren-port-huron-imaging",
@@ -384,7 +407,8 @@
           "address": { "line1": "1221 Pine Grove Ave", "city": "Port Huron", "region": "MI", "postal_code": "48060", "country": "United States" },
           "contact": { "phone": "800-625-2736", "website": "https://www.karmanos.org/karmanos/karmanos-locations/diagnostic-imaging-mclaren-port-huron-1346" },
           "coordinates": { "lat": 42.9878542, "lng": -82.4297825 },
-          "reviews": { "rating": 3.7, "reviewCount": 164, "sampleReviews": ["All the Doctors, Nurses and Staff I encountered were exceptional.", "Very happy with the people and the service received.", "They responded quickly, gave good care and answered any questions I had."] }
+          "reviews": { "rating": 3.7, "reviewCount": 164, "sampleReviews": ["All the Doctors, Nurses and Staff I encountered were exceptional.", "Very happy with the people and the service received.", "They responded quickly, gave good care and answered any questions I had."] },
+          "priceRange": { "low": 350, "high": 800, "currency": "USD" }
         },
         {
           "id": "us-mi-basha-diagnostics-dearborn",
@@ -395,7 +419,8 @@
           "address": { "line1": "4407 Roemer St", "city": "Dearborn", "region": "MI", "postal_code": "48126", "country": "United States" },
           "contact": { "website": "https://openmri.bashaopenmri.com/locations/" },
           "coordinates": { "lat": 42.318577, "lng": -83.1830123 },
-          "reviews": { "rating": 3.0, "reviewCount": 129, "sampleReviews": ["So nice ladies at front desk and great service inside", "They do not seem to have any doctors on staff here, only technicians.", "Waited over an hour past appointment time for an ultrasound."] }
+          "reviews": { "rating": 3.0, "reviewCount": 129, "sampleReviews": ["So nice ladies at front desk and great service inside", "They do not seem to have any doctors on staff here, only technicians.", "Waited over an hour past appointment time for an ultrasound."] },
+          "priceRange": { "low": 300, "high": 700, "currency": "USD" }
         },
         {
           "id": "ca-on-whole-body-mri-mississauga",
@@ -406,7 +431,8 @@
           "address": { "line1": "10 Kingsbridge Garden Circle, Suite 100", "city": "Mississauga", "region": "ON", "postal_code": "L5R 3K6", "country": "Canada" },
           "contact": { "phone": "647-910-2639", "website": "https://wholebodymri.ca/" },
           "coordinates": { "lat": 43.602998, "lng": -79.6489123 },
-          "reviews": { "rating": 4.0, "reviewCount": 48, "sampleReviews": ["Peace of mind is priceless. Very professional and thorough.", "State-of-the-art facility with friendly and knowledgeable staff.", "Great experience overall, results were detailed and easy to understand."] }
+          "reviews": { "rating": 4.0, "reviewCount": 48, "sampleReviews": ["Peace of mind is priceless. Very professional and thorough.", "State-of-the-art facility with friendly and knowledgeable staff.", "Great experience overall, results were detailed and easy to understand."] },
+          "priceRange": { "low": 2500, "high": 5000, "currency": "CAD" }
         },
         {
           "id": "ca-on-simply-mri-north-york",
@@ -417,7 +443,8 @@
           "address": { "line1": "2888 Bathurst St, Suite 100", "city": "North York", "region": "ON", "postal_code": "M6B 4H6", "country": "Canada" },
           "contact": { "phone": "647-697-5222", "website": "https://www.simplymri.com/" },
           "coordinates": { "lat": 43.6897, "lng": -79.4281 },
-          "reviews": { "rating": 4.4, "reviewCount": 27, "sampleReviews": ["Simple, fast and reliable — exactly as advertised.", "Very comfortable experience and the staff was incredibly helpful.", "Got my results quickly and the whole process was seamless."] }
+          "reviews": { "rating": 4.4, "reviewCount": 27, "sampleReviews": ["Simple, fast and reliable — exactly as advertised.", "Very comfortable experience and the staff was incredibly helpful.", "Got my results quickly and the whole process was seamless."] },
+          "priceRange": { "low": 2500, "high": 4500, "currency": "CAD" }
         }
       ]
     },

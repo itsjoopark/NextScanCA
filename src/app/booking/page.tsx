@@ -106,7 +106,6 @@ export default function BookingPage() {
 
   return (
     <>
-      <TrustBar />
       <div className="max-w-2xl mx-auto px-4 py-8">
         {/* Step indicator */}
         <div className="mb-8">

@@ -43,8 +43,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-background py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Section heading — left-aligned */}
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
+        <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter leading-[1.03] text-foreground/90 mb-12 text-center">
           How NextScan works
         </h2>
 

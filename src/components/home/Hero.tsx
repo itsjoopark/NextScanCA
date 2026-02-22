@@ -44,12 +44,6 @@ export default function Hero() {
             className="animate-fade-in-up mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             style={{ animationDelay: "300ms" }}
           >
-            <Button asChild size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
-              <Link href="/booking">
-                Find Available Scans
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
             <Button
               asChild
               variant="outline"
@@ -60,6 +54,12 @@ export default function Hero() {
                 <Phone className="mr-2 h-5 w-5 text-muted-foreground" />
                 Speak to a Coordinator
               </a>
+            </Button>
+            <Button asChild size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
+              <Link href="/booking">
+                Find Available Scans
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
 

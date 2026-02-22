@@ -38,6 +38,11 @@ export interface Clinic {
   contact: ClinicContact;
   coordinates: { lat: number; lng: number };
   reviews: ClinicReviews;
+  priceRange?: {
+    low: number;
+    high: number;
+    currency: string;
+  };
 }
 
 /**

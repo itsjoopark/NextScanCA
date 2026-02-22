@@ -72,12 +72,11 @@ export default function Differentiators() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            We find care at your service
+          <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter leading-[1.03] text-foreground/90">
+            Why NextScan
           </h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground max-w-xl mx-auto">
-            We are not a clinic or a directory. We are a care coordination
-            service built to take the burden off patients.
+            We find care at your service to take the burden off of patients.
           </p>
         </div>
 

@@ -3,27 +3,35 @@ import TrustBar from "@/components/shared/TrustBar";
 import HowItWorks from "@/components/home/HowItWorks";
 import Differentiators from "@/components/home/Differentiators";
 import FAQ from "@/components/home/FAQ";
-import GridBackground from "@/components/shared/GridBackground";
+import GlowPanel from "@/components/shared/GlowPanel";
+import FadeInOnScroll from "@/components/shared/FadeInOnScroll";
 
 export default function HomePage() {
   return (
     <div className="px-2 sm:px-3 py-2 sm:py-3 space-y-3 sm:space-y-4">
-      <GridBackground />
-      <div className="landing-panel">
-        <Hero />
-      </div>
-      <div>
+      <FadeInOnScroll>
+        <GlowPanel>
+          <Hero />
+        </GlowPanel>
+      </FadeInOnScroll>
+      <FadeInOnScroll>
         <TrustBar />
-      </div>
-      <div className="landing-panel [&>section]:bg-transparent">
-        <HowItWorks />
-      </div>
-      <div className="landing-panel [&>section]:bg-transparent">
-        <Differentiators />
-      </div>
-      <div className="landing-panel [&>section]:bg-transparent">
-        <FAQ />
-      </div>
+      </FadeInOnScroll>
+      <FadeInOnScroll>
+        <GlowPanel className="[&>section]:bg-transparent">
+          <HowItWorks />
+        </GlowPanel>
+      </FadeInOnScroll>
+      <FadeInOnScroll>
+        <GlowPanel className="[&>section]:bg-transparent">
+          <Differentiators />
+        </GlowPanel>
+      </FadeInOnScroll>
+      <FadeInOnScroll>
+        <GlowPanel className="[&>section]:bg-transparent">
+          <FAQ />
+        </GlowPanel>
+      </FadeInOnScroll>
     </div>
   );
 }

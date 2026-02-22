@@ -41,7 +41,7 @@ export default function FAQ() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12">
           {/* Left column */}
           <div className="flex flex-col items-start gap-6">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter leading-[1.03] text-foreground/90">
               Frequently asked
               <br />
               questions
