@@ -5,15 +5,32 @@ import { useRouter } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import Confirmation from "@/components/booking/Confirmation";
 
+interface SubmissionData {
+  scanType: string | null;
+  bodyArea: string | null;
+  bodyAreaName: string | null;
+  clinic: {
+    name: string;
+    city: string;
+    region: string;
+    rating: number;
+    reviewCount: number;
+  } | null;
+  email: string;
+  phone: string;
+  schedulePreferences: Array<{ date: string; timeSlot: string }>;
+  submittedAt: string;
+}
+
 let _cachedRaw: string | null = null;
-let _cachedParsed: Record<string, unknown> | null = null;
+let _cachedParsed: SubmissionData | null = null;
 
 function getSubmission() {
   if (typeof window === "undefined") return null;
   const stored = sessionStorage.getItem("nextscan_submission");
   if (stored !== _cachedRaw) {
     _cachedRaw = stored;
-    _cachedParsed = stored ? JSON.parse(stored) : null;
+    _cachedParsed = stored ? (JSON.parse(stored) as SubmissionData) : null;
   }
   return _cachedParsed;
 }
