@@ -41,6 +41,8 @@ These statements appear naturally in the hero, trust bar, differentiators sectio
 
 #### What I changed and why
 
+- **The homepage hero reads as an "about page," not a landing page.** Text overload, no visual hierarchy, and no clear entry point. The primary CTA asks for an email before communicating value or trust. High friction point: 5,829 homepage views, only 1,023 scan-related actions. ~82% of visitors bounce before starting the booking process.
+- **The booking process takes 6 steps to complete what is a single form.** No confirmation page after submission. Users have no signal their request went through.
 - **Trust bar redesigned as a flat inline strip.** Moved the five core trust signals (not a clinic, we coordinate bookings, no referral needed, pricing upfront, PHIPA privacy) into a prominent horizontal row below the hero so they are seen immediately.
 - **FAQ restructured into a two-column layout.** Heading and context on the left, accordion on the right. Questions were rewritten to match real patient concerns: requisitions, OHIP coverage, cross-border process, data handling, and cost.
 - **Differentiators section retitled and restyled.** Cards use muted backgrounds with no heavy borders, keeping the focus on the content. Heading changed to "We find care at your service" to reinforce the coordination model.
@@ -52,13 +54,13 @@ These statements appear naturally in the hero, trust bar, differentiators sectio
 
 - **Core page structure and section order.** The Hero → Trust → How It Works → Differentiators → FAQ flow is logical and mirrors how patients think (what is this → can I trust it → how does it work → why this over alternatives → specific questions). No reason to disrupt it.
 - **Design system tokens and component library.** The shadcn/ui + Tailwind foundation is solid and consistent. Changing it would add risk without clear benefit.
-- **Booking flow and data layer.** Out of scope for a landing page redesign. The intake form and clinic data are separate concerns.
-- **Dark mode.** The existing dark theme tokens are defined but the landing page targets a light, clinical aesthetic. Dark mode polish can come later.
+- **"I'm not sure" option in booking.** Serves patients with ambiguous needs and keeps them in the flow rather than forcing a choice that leads to drop-off. 
+- **Coordinator-led Positioning Model.** NextScan's core value prop versus a self-service directory. Changing this would degrade the current trust model the entire product is built upon. 
 
 #### Key trade-offs
-
-- **Static grid background vs. interactive gradient.** The interactive gradient was engaging but distracting. The static grid is calmer and more appropriate for a health service, but less "wow." Chose trust over novelty.
-- **Fewer FAQ items (7 → 5).** Reduced quantity to focus on the questions that actually block conversion. Risk is that some edge-case questions go unanswered, but the "Speak to a Coordinator" CTA covers that.
+- **Removing email gate on landing.** May risk losing quick-capture leads, but optimizes for reduced friction and clearer business messaging, giving users a reason to enter the flow rather than bounce. Leads by value. 
+- **Fewer booking steps to make schedulling more streamliend.** Means less granular drop-off data analytics, but that granularity is not useful when most users abandon before the end because of high friction. Showing all clinics at once creates a longer list, but eliminates the extra region step and lets patients start viewing options earlier.
+- **Static grid background vs. interactive gradient.** The interactive gradient was engaging but distracting. The static grid is calmer and more appropriate for a health service, but less "wow." Chose trust over novelty. 
 - **Removing the email link from the footer.** Consolidates contact into the booking CTA and coordinator call link. Simpler, but removes a low-friction contact option for users who prefer email.
 
 #### If I had 3 more weeks, what I would test next
@@ -68,3 +70,4 @@ These statements appear naturally in the hero, trust bar, differentiators sectio
 - **Micro-interactions on the trust bar.** Subtle hover states or animations that reinforce each trust point without being distracting.
 - **Mobile-first usability testing.** Verify that the two-column FAQ and trust bar layouts degrade gracefully on small screens and that tap targets are comfortable.
 - **Analytics instrumentation.** Track scroll depth, FAQ expansion rates, and CTA click-through to identify where patients drop off and what questions they care about most.
+  
